@@ -7,8 +7,8 @@ const MovieCard = ({ movie:
     <div className="movie-card">
       <img
         src={poster_path ?
-          `https://image.tmdb.org/t/p/w500/${poster_path}` : '/no-movie.png'}
-        alt={title}
+          `https://image.tmdb.org/t/p/w500${poster_path}` : '/no-movie.png'}
+        alt={title || 'Movie poster'}
       />
 
       <div className="mt-4">
@@ -16,7 +16,7 @@ const MovieCard = ({ movie:
 
         <div className="content">
           <div className="rating">
-            <img src="star.svg" alt="Star Icon" />
+            <img src="/star.svg" alt="" aria-hidden="true" />
             <p>{vote_average ? vote_average.toFixed(1) : 'N/A'}</p>
           </div>
 

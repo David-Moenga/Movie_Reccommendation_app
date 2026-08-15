@@ -1,12 +1,13 @@
-# React + Vite
+# CineScope
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A movie discovery app built with React, Vite, TMDB, and Appwrite.
 
-Currently, two official plugins are available:
+## Setup
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Install dependencies with `npm ci`.
+2. Copy `.env.example` to `.env`.
+3. Set `VITE_TMDB_API_KEY` to your TMDB **API Read Access Token** (the bearer token from TMDB's API settings).
+4. Optionally set the Appwrite values to enable search-trend tracking.
+5. Start the app with `npm run dev`.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Environment files are deliberately ignored by Git. Restart the Vite dev server after changing `.env`.
